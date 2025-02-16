@@ -1,27 +1,40 @@
-# PruebaTecnica
+# Prueba Técnica CVMatcher
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.1.
+## 📌 Descripción
+Aplicación web desarrollada en **Angular 17.3.11** para la búsqueda de empleos por título y ubicación.
+- Si el usuario busca un trabajo, se muestran los resultados filtrados.  
+- Si solo ingresa una ubicación, se listan todos los empleos disponibles en esa área.  
+- Si no ingresa nada, se muestra la lista completa de empleos.
 
-## Development server
+## 🚀 Tecnologías Utilizadas
+- **Angular** 17.3.11  
+- **Node.js** 20.10.0  
+- **TypeScript**  
+- **SCSS**  
+- **Angular Router** para navegación  
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## ✅ Requisitos Previos
+Antes de ejecutar el proyecto, asegúrate de tener instalado:
+- [Node.js 20.10.0](https://nodejs.org/)  
+- [Angular CLI](https://angular.io/cli) (instalar con `npm install -g @angular/cli`)
 
-## Code scaffolding
+## 🔧 Instalación y Ejecución
+Para clonar y ejecutar el proyecto:
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+```sh
+# Clonar el repositorio
+git clone git@github.com:EduMI-19/edu-mi-ope-prueba-tecnica-cvmatcher.git  
 
-## Build
+# Ingresar al directorio del proyecto
+cd edu-mi-ope-prueba-tecnica-cvmatcher  
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+# Instalar las dependencias (incluye node_modules)
+npm install  
 
-## Running unit tests
+# Ejecutar el servidor de desarrollo
+ng serve  
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+# Abrir en el navegador
+http://localhost:4200  
+```
 
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
