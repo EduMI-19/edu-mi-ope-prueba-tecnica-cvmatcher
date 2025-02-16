@@ -8,7 +8,6 @@ Aplicación web desarrollada en **Angular 17.3.11** para la búsqueda de empleos
 - **Node.js** 20.10.0  
 - **TypeScript**  
 - **SCSS**  
-- **Angular Router** para navegación  
 
 ## ✅ Requisitos Previos
 Antes de ejecutar el proyecto, asegúrate de tener instalado:
