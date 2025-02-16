@@ -1,1 +1,43 @@
 /* You can add global styles to this file, and also import other style files */
+:root{
+    --background-color: #fafafa;
+    --background-color-content: #ffffff;
+    --primary-text: #1d1d1d;
+    --secondary-text: #666666;
+    --primary-color: #225bef;
+    --secondary-color: #d0d0d0;
+    --border-color: #ccc;
+    --char-color: #fbdf0a;
+    --primary-hover: #0056b3; 
+    --box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+body{
+    background-color: var(--background-color);
+    margin: 0;
+    overflow-y: hidden;
+    font-family: 'Roboto', sans-serif;
+}
+
+.primary-button{
+    cursor: pointer;
+    color: white;
+    border: none;
+    font-size: medium;
+    font-weight: bold;
+    font-family: sans-serif;
+    background: var(--primary-color);
+    padding: 0.5rem 1.8rem;
+    border-radius: .4rem;
+
+    &:hover {
+        background-color: var(primary-hover);
+    }
+}
+
+.container { 
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 20px;
+}

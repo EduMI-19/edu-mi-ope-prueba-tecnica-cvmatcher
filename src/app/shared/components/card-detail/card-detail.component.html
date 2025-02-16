@@ -1,0 +1,47 @@
+@if (job) {
+<div class="job-card">
+  <div class="job-header">
+    <div class="job-logo">
+      <img [src]="job.company_image ? job.company_image : 'assets/img/company-img-default.png'" alt="{{ job.company }}" />
+    </div>
+    <div class="job-info">
+      <h1 class="job-title">{{ job.title | properTitle }}</h1>
+      <h2 class="company-name">{{ job.company | properTitle }}</h2>
+
+      <div class="job-mode-container">
+        <img src="assets/img/bag.png" class="icon" alt="Modalidad" />
+        <p class="job-mode">{{ getWorkModalityLabel(job.work_modality_id) }}</p>
+      </div>
+      
+      <div class="job-location-container">
+        <img src="assets/img/location-black.png" class="icon location-icon" alt="Ubicación" />
+        @if(job.location) {
+          <p class="job-location">{{ job.location | properTitle }}</p>
+        } @else{ 
+          <p class="job-location">Sin ubicación</p>
+        }
+      </div>
+
+    </div>
+  </div>
+
+  <div class="job-actions">
+    <p class="posted-date">Publicado el {{ job.posted_date }}</p>
+    <button class="primary-button">Ir a la oferta</button>
+  </div>
+
+  <hr class="divider ">
+
+  <div class="job-container-description">
+    <div class="container-anuncio">
+      <h3>ANUNCIO</h3>
+    </div>
+    <h3>Información del empleo</h3>
+    <div class="job-description" [innerHTML]="job.description | jobDescription"></div>
+  </div>
+</div>
+} @else {
+<div class="empty-state">
+  <p>No hay empleo seleccionado</p>
+</div>
+}

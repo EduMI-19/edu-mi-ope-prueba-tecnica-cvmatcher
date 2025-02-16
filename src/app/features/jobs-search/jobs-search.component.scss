@@ -1,0 +1,150 @@
+.container {
+  width: 85%;
+  max-width: 1200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: auto;
+  padding: 0 20px;
+}
+
+.results-container {
+  display: flex;
+  width: 100%;
+
+  .left-column {
+    width: 35%;
+    padding-right: 10px;
+    overflow-y: auto;
+    max-height: calc(100vh - 35vh);
+    box-sizing: border-box;
+
+    .card {
+      position: relative;
+      display: block;
+      background-color: #ffffff;
+      border: 1px solid #ccc;
+      padding: 10px;
+      margin-bottom: 10px;
+      border-radius: 5px;
+      gap: 20px;
+      padding: 1rem;
+
+      .progress-circle {
+        --percentage: 50;
+        --angle: calc(var(--percentage) * 3.6deg);
+
+        width: 2.8rem;
+        height: 2.8rem;
+        border-radius: 50%;
+        background: conic-gradient(
+          var(--char-color) var(--angle),
+          var(--secondary-color) var(--angle) 360deg
+        );
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+
+        &::before {
+          content: "";
+          position: absolute;
+          width: 2.2rem;
+          height: 2.2rem;
+          background-color: white;
+          border-radius: 50%;
+        }
+
+        .progress-text {
+          position: relative;
+          font-size: .8em;
+          font-weight: bold;
+          color: var(--char-color);
+        }
+      }
+    }
+  }
+
+  .right-column {
+    width: 65%;
+    overflow-y: auto;
+    max-height: calc(100vh - 35vh);
+    padding-left: 10px;
+
+    .job-detail {
+      background: white;
+      border: 1px solid var(--border-color);
+      padding: 20px;
+      border-radius: 5px;
+    }
+  }
+}
+.left-column::-webkit-scrollbar-thumb {
+  background-color: #888;
+  border-radius: 10px;
+  border: 3px solid #fff;
+}
+
+.left-column::-webkit-scrollbar-track {
+  background-color: #f1f1f1;
+  border-radius: 10px; 
+}
+
+.left-column::-webkit-scrollbar-button {
+  display: none;
+}
+@media (max-width: 768px) {
+  .container {
+    width: 95%;
+  }
+
+  .search-container {
+    gap: 5px;
+  }
+
+  .input-wrapper {
+    flex: 1 1 35%;
+  }
+
+  .search-input {
+    flex: 1 1 40%;
+  }
+
+  .search-button {
+    flex: 1 1 auto;
+  }
+
+  .left-column,
+  .right-column {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .search-container {
+    flex-wrap: nowrap;
+  }
+
+  .input-wrapper {
+    flex: 1 1 30%;
+  }
+
+  .search-input {
+    flex: 1 1 35%;
+  }
+
+  .search-button {
+    flex: 1 1 auto;
+  }
+}
+
+.filters-container {
+  display: flex;
+  background: white;
+  width: 100%;
+  padding: .5rem 0;
+}
+
+.form-search-container{
+  width: 100%;
+}

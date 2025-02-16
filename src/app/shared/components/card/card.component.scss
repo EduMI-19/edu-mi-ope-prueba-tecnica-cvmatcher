@@ -1,0 +1,113 @@
+.card {
+  cursor: pointer;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+
+  display: block;
+  background-color: #ffffff;
+  border: 1px solid var(--border-color);
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  gap: 20px;
+  padding: 1rem;
+
+  .card-options {
+    position: absolute;
+    right: 10px;
+    top: 0;
+    transform: translateY(10%);
+    background: transparent;
+    border: none;
+    font-size: 1.5rem;
+    font-weight: bold;
+    cursor: pointer;
+    color: #666;
+    padding: 5px;
+    &:hover {
+      color: #000;
+    }
+  }
+
+  .card-content {
+    display: flex;
+    align-items: flex-start;
+    position: relative;
+
+    .card-img img {
+      width: 100px;
+      height: 100px;
+      object-fit: cover;
+      border-radius: 5px;
+    }
+
+    .card-info {
+      display: flex;
+      margin-left: 1rem;
+      flex-direction: column;
+      justify-content: center;
+
+      .job-title {
+        font-size: 1.2rem;
+        font-weight: bold;
+        margin: 0;
+      }
+
+      .company-name{
+        font-size: 1rem;
+        color: var(--secondary-text);
+        margin: 5px 0;
+      }
+
+      .job-location {
+        font-size: .8rem;
+        color: var(--secondary-text)
+      }
+    }
+  }
+
+  .card-footer {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .posted-date {
+      font-size: 0.9em;
+      color: #888;
+    }
+  }
+
+  .progress-circle {
+    --percentage: 50;
+    --angle: calc(var(--percentage) * 3.6deg);
+
+    width: 2.8rem;
+    height: 2.8rem;
+    border-radius: 50%;
+    background: conic-gradient(
+      var(--char-color) var(--angle),
+      var(--secondary-color) var(--angle) 360deg
+    );
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 2.2rem;
+      height: 2.2rem;
+      background-color: white;
+      border-radius: 50%;
+    }
+
+    .progress-text {
+      position: relative;
+      font-size: 0.8em;
+      font-weight: bold;
+      color: var(--char-color);
+    }
+  }
+}

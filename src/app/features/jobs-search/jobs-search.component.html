@@ -1,0 +1,25 @@
+<div class="container">
+  <div class="form-search-container">
+    <app-search-form (search)="onSearch($event)"></app-search-form>
+  </div>
+  
+  <div class="filters-container">
+    <app-filters></app-filters>
+  </div>
+
+  <div class="results-container">
+    <div class="left-column">
+      <div class="card"> {{filteredJobs().length}} Empleos encontrados</div>
+      @for (job of filteredJobs(); track $index) {
+        <app-card [job]="job" (click)="selectJob(job)"
+        [class.selected]="job.job_id === selectedJob()?.job_id">
+        </app-card>
+      }
+    </div>
+    <div class="right-column">
+      <div class="job-detail">
+        <app-card-detail [job]="selectedJob()"></app-card-detail>
+      </div>
+    </div>
+  </div>
+</div>

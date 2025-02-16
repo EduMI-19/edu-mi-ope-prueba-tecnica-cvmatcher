@@ -1,0 +1,19 @@
+<div class="card selected">
+    <button class="card-options">⋮</button>
+    <div class="card-content">
+        <div class="card-img">
+            <img [src]="job.company_image ? job.company_image : 'assets/img/company-img-default.png'" alt="{{ job.company }}">
+        </div>
+        <div class="card-info">
+            <h1 class="job-title">{{ job.title | properTitle }}</h1>
+            <h2 class="company-name">{{ job.company | properTitle }}</h2>
+            <p class="job-location">{{ job.location | properTitle }}</p>
+        </div>
+    </div>
+    <div class="card-footer">
+        <p class="posted-date">Publicado el {{job.posted_date}}</p>
+        <div class="progress-circle" style="--percentage: 65;">
+          <span class="progress-text">65%</span>
+        </div>            
+    </div>
+</div>

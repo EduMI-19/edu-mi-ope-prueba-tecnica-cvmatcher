@@ -1,0 +1,29 @@
+<form class="search-container" [formGroup]="searchForm" (ngSubmit)="onSubmit()">
+  <div class="input-wrapper">
+    <img src="/assets/img/lupa.png" class="input-icon" alt="Icono Empleo" />
+    <input
+      class="search-input"
+      type="text"
+      placeholder="Empleo"
+      formControlName="title"
+    />
+  </div>
+
+  <div class="separator">|</div>
+
+  <div class="input-wrapper">
+    <img
+      src="assets/img/location-gray.png"
+      class="input-icon"
+      alt="Icono Lugar"
+    />
+    <input
+      class="search-input"
+      type="text"
+      placeholder="Lugar"
+      formControlName="location"
+    />
+  </div>
+
+  <button class="primary-button search-button" type="submit">Buscar</button>
+</form>
