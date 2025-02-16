@@ -1,10 +1,7 @@
 # Prueba Técnica CVMatcher
 
 ## 📌 Descripción
-Aplicación web desarrollada en **Angular 17.3.11** para la búsqueda de empleos por título y ubicación.
-- Si el usuario busca un trabajo, se muestran los resultados filtrados.  
-- Si solo ingresa una ubicación, se listan todos los empleos disponibles en esa área.  
-- Si no ingresa nada, se muestra la lista completa de empleos.
+Aplicación web desarrollada en **Angular 17.3.11** para la búsqueda de empleos.
 
 ## 🚀 Tecnologías Utilizadas
 - **Angular** 17.3.11  
